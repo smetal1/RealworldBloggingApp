@@ -1,0 +1,46 @@
+[package]
+authors = ["saurav7055@gmail.com"]
+name = "realworld"
+version = "0.0.1"
+edition = "2021"
+
+description = """
+Rust Development using Rocket Framework and Diesel ORM
+"""
+readme = "README.md"
+
+[dependencies]
+rocket = { version = "0.5.0-rc.1", default-features = false, features = ["json"] }
+rocket_cors = { version = "0.6.0-alpha1", default-features = false }
+serde = { version = "1.0.133", features = ["derive"] }
+serde_json = "1.0.75"
+scrypt = { version = "0.8.1", default-features = true }
+chrono = { version = "0.4.19", features = ["serde"] }
+diesel = { version = "1.4.8", features = ["postgres", "chrono"] }
+validator = "0.14.0"
+validator_derive = "0.14.0"
+slug = "0.1.4"
+rand = "0.8.4"
+dotenv = "0.15.0"
+jsonwebtoken = "7.2.0"
+
+[dependencies.rocket_sync_db_pools]
+version = "0.1.0-rc.1"
+default-features = false
+features = ["diesel_postgres_pool"]
+
+[dev-dependencies]
+once_cell = "1.9.0"
+
+[features]
+default = ["random-suffix"]
+
+
+random-suffix = []
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.dev]
+opt-level = 1
+debug = 0

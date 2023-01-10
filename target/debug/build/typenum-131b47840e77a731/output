@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/saurav/Desktop/development/learnings/realworld-rust-rocket/target/debug/build/typenum-131b47840e77a731/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/saurav/Desktop/development/learnings/realworld-rust-rocket/target/debug/build/typenum-131b47840e77a731/out/op.rs
